@@ -52,10 +52,10 @@ app.post("/placeorder", (req, res) => {
       if (error1) {
         throw error1;
       }
-      var exchange = "order_exchange";
+      var exchange = "order_exchange2";
       //var msg = process.argv.slice(2).join(' ') || "Hello World!";
 
-      channel.assertExchange(exchange, "topic");
+      channel.assertExchange(exchange, "direct");
 
       //   channel.assertQueue(queue, {
       //     durable: true,

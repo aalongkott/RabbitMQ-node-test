@@ -10,9 +10,9 @@ amqp.connect("amqp://localhost", function (error0, connection) {
     if (error1) {
       throw error1;
     }
-    var exchange = "order_exchange";
+    var exchange = "order_exchange2";
 
-    channel.assertExchange(exchange, "topic");
+    channel.assertExchange(exchange, "direct");
 
     channel.assertQueue(
       "",
